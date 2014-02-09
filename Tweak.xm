@@ -10,18 +10,6 @@
 
 %end
 
-#pragma mark UIView
-
-%hook UIView
-
-- (void)_setBackgroundColor:(id)arg1{
-	arg1 = [UIColor colorWithRed:37.0f/255.0f green:37.0f/255.0f blue:37.0f/255.0f alpha:1.0f];
-
-	return %orig;
-}
-
-%end
-
 #pragma mark UITableView
 
 %hook UITableView
