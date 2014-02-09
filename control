@@ -1,0 +1,9 @@
+Package: com.ApexTweaks.24
+Name: 24
+Depends: mobilesubstrate
+Version: 0.0.1
+Architecture: iphoneos-arm
+Description: An awesome MobileSubstrate tweak!
+Maintainer: ApexTweaks
+Author: ApexTweaks
+Section: Tweaks
