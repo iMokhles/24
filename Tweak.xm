@@ -1,5 +1,7 @@
 #import "substrate.h"
 
+#define DARK_COLOR [UIColor colorWithRed:37.0f/255.0f green:37.0f/255.0f blue:37.0f/255.0f alpha:1.0f]
+
 #pragma mark black keyboard thxac3xxilybabe
 
 %hook UIKBRenderConfig
@@ -15,7 +17,7 @@
 %hook UITableView
 
 - (void)setBackgroundColor:(id)arg1{
-	arg1 = [UIColor colorWithRed:37.0f/255.0f green:37.0f/255.0f blue:37.0f/255.0f alpha:1.0f];
+	arg1 = DARK_COLOR;
 
 	return %orig;
 }
@@ -27,17 +29,17 @@
 %hook UITableViewCell
 
 - (id)backgroundColor {
-	return [UIColor colorWithRed:37.0f/255.0f green:37.0f/255.0f blue:37.0f/255.0f alpha:1.0f];
+	return DARK_COLOR;
 }
 
 - (void)setBackgroundColor:(id)arg1{
-		arg1 = [UIColor colorWithRed:37.0f/255.0f green:37.0f/255.0f blue:37.0f/255.0f alpha:1.0f];
+		arg1 = DARK_COLOR;
 
 	return %orig;
 }
 
 - (void)setTextColor:(id)arg1{
-	arg1 = [UIColor colorWithRed:37.0f/255.0f green:37.0f/255.0f blue:37.0f/255.0f alpha:1.0f];
+	arg1 = DARK_COLOR;
 
 	return %orig;
 }
@@ -53,7 +55,7 @@
 %hook UINavigationBar
 
 - (id)backgroundColor {
-	return [UIColor colorWithRed:37.0f/255.0f green:37.0f/255.0f blue:37.0f/255.0f alpha:1.0f];
+	return DARK_COLOR;
 }
 
 
@@ -65,27 +67,27 @@
 %hook UIToolbar
 
 - (void)_setBarTintColor:(id)arg1 force:(BOOL)arg2{
-	arg1 = [UIColor colorWithRed:37.0f/255.0f green:37.0f/255.0f blue:37.0f/255.0f alpha:1.0f];
+	arg1 = DARK_COLOR;
 	arg2 = YES;
 
 	return;
 }
 
 - (void)setTintColor:(id)arg1{
-	arg1 = [UIColor colorWithRed:37.0f/255.0f green:37.0f/255.0f blue:37.0f/255.0f alpha:1.0f];
+	arg1 = DARK_COLOR;
 
 	return;
 }
 
 
 - (void)setBarTintColor:(id)arg1{
-	arg1 = [UIColor colorWithRed:37.0f/255.0f green:37.0f/255.0f blue:37.0f/255.0f alpha:1.0f];
+	arg1 = DARK_COLOR;
 
 	return;
 }
 
 - (id)barTintColor{
-	return [UIColor colorWithRed:37.0f/255.0f green:37.0f/255.0f blue:37.0f/255.0f alpha:1.0f];
+	return DARK_COLOR;
 }
 
 %end
@@ -93,11 +95,11 @@
 %hook UITextField
 
 - (id)backgroundColor {
-	return [UIColor colorWithRed:37.0f/255.0f green:37.0f/255.0f blue:37.0f/255.0f alpha:1.0f];
+	return DARK_COLOR;
 }
 
 - (void)setBackgroundColor:(id)arg1{
-		arg1 = [UIColor colorWithRed:37.0f/255.0f green:37.0f/255.0f blue:37.0f/255.0f alpha:1.0f];
+		arg1 = DARK_COLOR;
 
 	return %orig;
 }
