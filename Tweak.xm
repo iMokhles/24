@@ -6,7 +6,7 @@
 
 %hook UIKBRenderConfig
 
-- (BOOL)lightKeyboard {
+- (BOOL)lightKeyboard{
     return NO;
 }
 
@@ -17,9 +17,7 @@
 %hook UITableView
 
 - (void)setBackgroundColor:(id)arg1{
-	arg1 = DARK_COLOR;
-
-	return %orig;
+	%orig(DARK_COLOR);
 }
 
 %end
@@ -28,24 +26,20 @@
 
 %hook UITableViewCell
 
-- (id)backgroundColor {
+- (id)backgroundColor{
 	return DARK_COLOR;
 }
 
 - (void)setBackgroundColor:(id)arg1{
-		arg1 = DARK_COLOR;
-
-	return %orig;
+	%orig(DARK_COLOR);
 }
 
 - (void)setTextColor:(id)arg1{
-	arg1 = DARK_COLOR;
-
-	return %orig;
+	%orig(DARK_COLOR);
 }
 
 - (id)textColor{
-	return [UIColor whiteColor];
+	return [UIColor whiteColor]; //This could use darkening.
 }
 
 %end
@@ -54,12 +48,9 @@
 
 %hook UINavigationBar
 
-- (id)backgroundColor {
+- (id)backgroundColor{
 	return DARK_COLOR;
 }
-
-
-
 %end
 
 #pragma mark UIToolbar
@@ -67,22 +58,14 @@
 %hook UIToolbar
 
 - (void)_setBarTintColor:(id)arg1 force:(BOOL)arg2{
-	arg1 = DARK_COLOR;
-	arg2 = YES;
-
 	return;
 }
 
 - (void)setTintColor:(id)arg1{
-	arg1 = DARK_COLOR;
-
 	return;
 }
 
-
 - (void)setBarTintColor:(id)arg1{
-	arg1 = DARK_COLOR;
-
 	return;
 }
 
@@ -99,9 +82,7 @@
 }
 
 - (void)setBackgroundColor:(id)arg1{
-		arg1 = DARK_COLOR;
-
-	return %orig;
+	%orig(DARK_COLOR);
 }
 
 
